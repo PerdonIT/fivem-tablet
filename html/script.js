@@ -1,25 +1,19 @@
 $(function () {
     window.addEventListener('message', function (event) {
-        if (event.data.type == "enableui") {
+        if (event.data.type === "enableui") {
             document.body.style.display = event.data.enable ? "block" : "none";
-        } else if (event.data.type == "backHome") {
+        } else if (event.data.type === "backHome") {
             document.body.style.display = "block";
 
         }
     });
 
     document.onkeyup = function (data) {
-        if (data.which == 27) { // Escape toets
+        if (data.which === 27) { // Escape toets
             $.post('http://meos/NUIFocusOff', JSON.stringify({}));
 
         }
     };
-
-
-    function backHome() {
-        document.body.style.display = "block";
-    }
-
 
     dragElement(document.getElementById("tablet"));
 
