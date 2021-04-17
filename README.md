@@ -10,3 +10,8 @@ Om fouten te voorkomen is het belangrijk dat je geen aanpassing doet in het scri
 
 ### Hoe werkt het?
 1. Je kan de tablet openen met de `/meos` command
+
+### Screenshots
+![Screenshot](https://cdn.discordapp.com/attachments/825106108926263349/825118307404349450/unknown.png)
+![Screenshot](https://cdn.discordapp.com/attachments/825106108926263349/825118707931938826/unknown.png)
+![Screenshot](https://cdn.discordapp.com/attachments/825106108926263349/825118802361450526/unknown.png)
