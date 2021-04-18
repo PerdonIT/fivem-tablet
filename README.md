@@ -9,7 +9,7 @@ Om fouten te voorkomen is het belangrijk dat je geen aanpassing doet in het scri
 4. Zet de resource automatisch aan in je `server.cfg` (`start meos`)
 
 ### Hoe werkt het?
-1. Je kan de tablet openen met de `/meos` command
+1. Je kan de tablet openen met het `/meos` command
 
 ### Screenshots
 ![Screenshot](https://cdn.discordapp.com/attachments/825106108926263349/825118307404349450/unknown.png)
