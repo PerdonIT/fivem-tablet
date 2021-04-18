@@ -1,6 +1,8 @@
 # FiveM Tablet
 Deze tablet is ontworpen voor de perfecte samenwerking met het MEOS van PerdonIT.
-Om fouten te voorkomen is het belangrijk dat je geen aanpassing doet in het script en de installatie instructies goed volgt
+Om fouten te voorkomen is het belangrijk dat je geen aanpassing doet in het script en de installatie instructies goed volgt.
+
+Mocht je zelf aanpassingen willen zien in het script kan je een [Pull Request](https://github.com/PerdonIT/fivem-tablet/pulls) of [Issue](https://github.com/PerdonIT/fivem-tablet/issues) openen.
 
 ### Installatie
 1. Zorg dat je een MEOS account hebt op https://perdonit.nl
@@ -10,6 +12,7 @@ Om fouten te voorkomen is het belangrijk dat je geen aanpassing doet in het scri
 
 ### Hoe werkt het?
 1. Je kan de tablet openen met het `/meos` command
+2. Om de tablet weer te sluiten moet je op `esc` klikken 
 
 ### Screenshots
 ![Screenshot](https://cdn.discordapp.com/attachments/825106108926263349/825118307404349450/unknown.png)
