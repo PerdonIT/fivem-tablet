@@ -4,6 +4,8 @@ Om fouten te voorkomen is het belangrijk dat je geen aanpassing doet in het scri
 
 Mocht je zelf aanpassingen willen zien in het script kan je een [Pull Request](https://github.com/PerdonIT/fivem-tablet/pulls) of [Issue](https://github.com/PerdonIT/fivem-tablet/issues) openen.
 
+Voor vragen kan je de Discord server joinen: https://discord.gg/r6fNJcSP3E .
+
 ### Installatie
 1. Zorg dat je een MEOS account hebt op https://perdonit.nl
 2. Download de source-code( https://github.com/PerdonIT/fivem-tablet/releases/ )
