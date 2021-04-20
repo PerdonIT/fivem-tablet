@@ -14,6 +14,22 @@ Mocht je zelf aanpassingen willen zien in het script kan je een [Pull Request](h
 1. Je kan de tablet openen met het `/meos` command
 2. Om de tablet weer te sluiten moet je op `esc` klikken 
 
+### Kan ik ook client-events gebruiken om de tablet te openen?
+Je kan het `perdonit:meos:setvisible` event aanroepen om de tablet te openen of te sluiten. 
+
+Voorbeeld code:
+```
+-- Meos openen
+RegisterCommand("openmeos", function(source, args, rawCommand)
+    TriggerEvent('perdonit:meos:setvisible', true)
+end, false)
+
+-- Meos sluiten
+RegisterCommand("sluitmeos", function(source, args, rawCommand)
+    TriggerEvent('perdonit:meos:setvisible', false)
+end, false)
+```
+
 ### Screenshots
 ![Screenshot](https://cdn.discordapp.com/attachments/825106108926263349/825118307404349450/unknown.png)
 ![Screenshot](https://cdn.discordapp.com/attachments/825106108926263349/825118707931938826/unknown.png)
