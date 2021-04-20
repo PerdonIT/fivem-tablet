@@ -18,8 +18,12 @@ function PrintChatMessage(text)
 end
 
 RegisterNUICallback('NUIFocusOff', function()
-
     Gui(false)
+end)
+
+RegisterNetEvent('perdonit:meos:setvisible')
+AddEventHandler('perdonit:meos:setvisible', function(visibility)
+    Gui(visibility)
 end)
 
 RegisterCommand("meos", function(source, args, rawCommand)
