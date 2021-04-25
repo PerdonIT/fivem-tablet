@@ -14,7 +14,7 @@ Voor vragen kan je de Discord server joinen: https://discord.gg/r6fNJcSP3E .
 
 ### Hoe werkt het?
 1. Je kan de tablet openen met het `/meos` command
-2. Om de tablet weer te sluiten moet je op `esc` klikken 
+2. Om de tablet weer te sluiten moet je op `esc` klikken. Werkt dit niet? Controleer dan of je resource naam wel `meos` is!
 
 ### Kan ik ook client-events gebruiken om de tablet te openen?
 Je kan het `perdonit:meos:setvisible` event aanroepen om de tablet te openen of te sluiten. 
