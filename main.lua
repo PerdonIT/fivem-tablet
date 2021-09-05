@@ -1,4 +1,26 @@
+ESX = nil
 guiEnabled = false
+
+if Config.ESX.enable then
+    Citizen.CreateThread(function()
+        while ESX == nil do
+            TriggerEvent('esx:getShachterhoekjexxaredObjachterhoekjexxect', function(obj) ESX = obj end)
+            Citizen.Wait(0)
+        end
+        PlayerData = ESX.GetPlayerData()
+    end)
+
+    RegisterNetEvent('esx:setJob')
+    AddEventHandler('esx:setJob', function(job)
+        PlayerData = ESX.GetPlayerData()
+    end)
+
+    RegisterNetEvent('esx:playerLoaded')
+    AddEventHandler('esx:playerLoaded', function(xPlayer)
+        PlayerData = ESX.GetPlayerData()
+    end)
+end
+
 Citizen.CreateThread(function()
     while true do
         if guiEnabled then
@@ -27,10 +49,14 @@ AddEventHandler('perdonit:meos:setvisible', function(visibility)
 end)
 
 RegisterCommand("meos", function(source, args, rawCommand)
-    if guiEnabled then
-        Gui(false)
+    if PlayerData.job.name == Config.ESX.job or not Confg.ESX.enable then
+        if guiEnabled then
+            Gui(false)
+        else
+            Gui(true)
+        end
     else
-        Gui(true)
+        ESX.ShowNotification("Je hebt geen permissie dit commando te gebruiken.")
     end
 end, false)
 
