@@ -49,7 +49,7 @@ AddEventHandler('perdonit:meos:setvisible', function(visibility)
 end)
 
 RegisterCommand("meos", function(source, args, rawCommand)
-    if PlayerData.job.name == Config.ESX.job or not Confg.ESX.enable then
+    if PlayerData.job.name == Config.ESX.job or not Config.ESX.enable then
         if guiEnabled then
             Gui(false)
         else
