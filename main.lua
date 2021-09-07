@@ -46,7 +46,7 @@ end)
 
 if Config.Command then
     RegisterCommand("meos", function(source, args, rawCommand)
-        if PlayerData.job.name == Config.ESX.job or not Config.ESX.enable then
+        if not Config.ESX.enable or PlayerData.job.name == Config.ESX.job then
             if guiEnabled then
                 Gui(false)
             else
