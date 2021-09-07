@@ -35,10 +35,6 @@ Citizen.CreateThread(function()
     end
 end)
 
-function PrintChatMessage(text)
-    TriggerEvent('chatMessage', "system", { 255, 0, 0 }, text)
-end
-
 RegisterNUICallback('NUIFocusOff', function()
     Gui(false)
 end)
