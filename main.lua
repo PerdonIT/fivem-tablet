@@ -44,17 +44,19 @@ AddEventHandler('perdonit:meos:setvisible', function(visibility)
     Gui(visibility)
 end)
 
-RegisterCommand("meos", function(source, args, rawCommand)
-    if PlayerData.job.name == Config.ESX.job or not Config.ESX.enable then
-        if guiEnabled then
-            Gui(false)
+if Config.Command then
+    RegisterCommand("meos", function(source, args, rawCommand)
+        if PlayerData.job.name == Config.ESX.job or not Config.ESX.enable then
+            if guiEnabled then
+                Gui(false)
+            else
+                Gui(true)
+            end
         else
-            Gui(true)
+            ESX.ShowNotification("Je hebt geen permissie dit commando te gebruiken.")
         end
-    else
-        ESX.ShowNotification("Je hebt geen permissie dit commando te gebruiken.")
-    end
-end, false)
+    end, false)
+end
 
 function Gui(toggle)
     SetNuiFocus(toggle, toggle)
