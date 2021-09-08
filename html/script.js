@@ -1,3 +1,8 @@
+// This function is called from the IFrame
+function closeNui() {
+    $.post(window.location.origin.replace("cfx-nui-", "") + '/NUIFocusOff', JSON.stringify({}));
+}
+
 $(function () {
     window.addEventListener('message', function (event) {
         if (event.data.type === "enableui") {
@@ -10,8 +15,7 @@ $(function () {
 
     document.onkeyup = function (data) {
         if (data.which === 27) { // Escape toets
-            $.post('http://meos/NUIFocusOff', JSON.stringify({}));
-
+            $.post(window.location.origin.replace("cfx-nui-", "") + '/NUIFocusOff', JSON.stringify({}));
         }
     };
 
