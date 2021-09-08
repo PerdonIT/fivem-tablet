@@ -1,10 +1,11 @@
-var resourceName;
+// This function is called from the IFrame
+function closeNui() {
+    $.post(window.location.origin.replace("cfx-nui-", "") + '/NUIFocusOff', JSON.stringify({}));
+}
 
 $(function () {
     window.addEventListener('message', function (event) {
-        if (event.data.type === "initdata") {
-            resourceName = event.data.name;
-        } else if (event.data.type === "enableui") {
+        if (event.data.type === "enableui") {
             document.body.style.display = event.data.enable ? "block" : "none";
         } else if (event.data.type === "backHome") {
             document.body.style.display = "block";
@@ -14,7 +15,7 @@ $(function () {
 
     document.onkeyup = function (data) {
         if (data.which === 27) { // Escape toets
-            $.post('http://' + resourceName + '/NUIFocusOff', JSON.stringify({}));
+            $.post(window.location.origin.replace("cfx-nui-", "") + '/NUIFocusOff', JSON.stringify({}));
         }
     };
 
