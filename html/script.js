@@ -1,8 +1,8 @@
 var resourceName;
 
 $(function () {
-    window.addEventListener('message', function (event) {`
-        if (event.data.type == "initdata") {
+    window.addEventListener('message', function (event) {
+        if (event.data.type === "initdata") {
             resourceName = event.data.name;
         } else if (event.data.type === "enableui") {
             document.body.style.display = event.data.enable ? "block" : "none";
@@ -15,7 +15,6 @@ $(function () {
     document.onkeyup = function (data) {
         if (data.which === 27) { // Escape toets
             $.post('http://' + resourceName + '/NUIFocusOff', JSON.stringify({}));
-
         }
     };
 
