@@ -1,3 +1,23 @@
+ESX = nil
+local PlayerData = {}
+
+Citizen.CreateThread(function()
+	while ESX == nil do
+		TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
+		Citizen.Wait(0)
+	end
+	while ESX.GetPlayerData() == nil do
+		Citizen.Wait(10)
+	end
+	PlayerData = ESX.GetPlayerData()
+end)
+
+RegisterNetEvent('esx:setJob')
+AddEventHandler('esx:setJob', function(job)
+    PlayerData.job = job
+end)
+
+
 guiEnabled = false
 Citizen.CreateThread(function()
     while true do
@@ -27,6 +47,9 @@ AddEventHandler('perdonit:meos:setvisible', function(visibility)
 end)
 
 RegisterCommand("meos", function(source, args, rawCommand)
+    if PlayerData.job == nil or (PlayerData.job.name != 'police' and PlayerData.job.name != 'kmar') then
+        return false
+    end
     if guiEnabled then
         Gui(false)
     else
