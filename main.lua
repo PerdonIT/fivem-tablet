@@ -47,7 +47,12 @@ AddEventHandler('perdonit:meos:setvisible', function(visibility)
 end)
 
 RegisterCommand("meos", function(source, args, rawCommand)
-    if PlayerData.job == nil or (PlayerData.job.name != 'police' and PlayerData.job.name != 'kmar') then
+    if PlayerData.job == nil or (PlayerData.job.name ~= 'police' and PlayerData.job.name ~= 'kmar') then	
+		TriggerEvent('chat:addMessage', {
+			color = { 255, 0, 0},
+			multiline = true,
+			args = {"[meos]", "U heeft niet de correcte baan!"}
+		})
         return false
     end
     if guiEnabled then
@@ -98,11 +103,3 @@ function stopAnim()
     StopAnimTask(GetPlayerPed(-1), "amb@world_human_seat_wall_tablet@female@base", "base", 8.0, -8.0, -1, 50, 0, false, false, false)
     DeleteEntity(tab)
 end
-
-
-
-
---RegisterNetEvent("output")
---AddEventHandler("output", function(argument)
---  TriggerEvent("chatMessage", "[Success]", {0,255,0}, argument)
---end)
