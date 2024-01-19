@@ -7,8 +7,8 @@ Mocht je zelf aanpassingen willen zien in het script kan je een [Pull Request](h
 Voor vragen kan je de Discord server joinen: https://discord.gg/r6fNJcSP3E .
 
 ### Installatie
-1. Zorg dat je een MEOS account hebt op https://perdonit.nl
-2. Download de source-code( https://github.com/PerdonIT/fivem-tablet/releases/ )
+1. Zorg dat je een MEOS account hebt op <https://perdonit.com/login>
+2. Download de source-code(<https://github.com/PerdonIT/fivem-tablet/releases/>)
 3. Zorgt dat de resource naam `meos` is
 4. Zet de resource automatisch aan in je `server.cfg` (`start meos`)
 
