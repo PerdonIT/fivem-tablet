@@ -1,43 +1,42 @@
 body {
-    display: none;
-    overflow: hidden;
+  display: none;
+  overflow: hidden;
 }
 
 #tablet {
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    width: 1377px;
-    height: 768px;
-    display: flex;
-    flex-direction: column;
-    background-image: url(tablet.png);
-    background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  width: 1702px;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  background-image: url(tablet.png);
+  background-repeat: no-repeat;
+  background-size: 1600px;
 }
 
 .tablet .content {
-    width: 1366px;
-    height: 768px;
-    background: rgba(0, 0, 0, 0);
-    flex-grow: 1;
-
+  width: 1366px;
+  height: 768px;
+  background: rgba(0, 0, 0, 0);
+  flex-grow: 1;
 }
 
 .tablet .content {
-    margin-left: 37%;
-    margin-bottom: 15%;
-    margin-top: 10%;
-
+  margin-left: 37%;
+  margin-bottom: 15%;
+  margin-top: 10%;
 }
 
 iframe {
-    position: relative;
-    top: 85px;
-    left: 118px;
-    width: 1170px;
-    height: 602px;
-    border: 0px;
-    margin: 0px;
-    padding: 0px;
+  position: relative;
+  top: 76px;
+  left: 216px;
+  width: 1170px;
+  height: 718px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
 }
